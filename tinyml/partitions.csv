@@ -1,0 +1,8 @@
+# Partition table para ESP32-S3 con 4 MB flash
+# El modelo RF compila ~750 KB extra de código, app necesita ~3.5 MB
+#
+# Name,   Type, SubType,  Offset,   Size,   Flags
+nvs,      data, nvs,      0x9000,   24K
+phy_init, data, phy,      0xF000,   4K
+factory,  app,  factory,  0x10000,  3500K
+storage,  data, fat,      ,         256K

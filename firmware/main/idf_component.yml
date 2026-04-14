@@ -1,0 +1,9 @@
+## IDF Component Manager Manifest
+dependencies:
+  idf:
+    version: '>=5.0.0'
+  ## Biblioteca MPU6050 de esp-idf-lib
+  esp-idf-lib/mpu6050:
+    version: '*'
+  esp-idf-lib/i2cdev:
+    version: '*'

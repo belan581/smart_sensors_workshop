@@ -1,0 +1,30 @@
+# sdkconfig.defaults — TinyML Smart Sensors
+# ESP-IDF aplica estos valores si no existen en sdkconfig
+
+# ─── Target ────────────────────────────────────────────────────
+CONFIG_IDF_TARGET="esp32s3"
+
+# ─── WiFi ──────────────────────────────────────────────────────
+CONFIG_ESP_WIFI_SOFTAP_SUPPORT=y
+CONFIG_ESP_WIFI_STA_DISCONNECTED_PM_ENABLE=n
+
+# ─── BLE Provisioning ──────────────────────────────────────────
+CONFIG_BT_ENABLED=y
+CONFIG_BT_NIMBLE_ENABLED=y
+
+# ─── mDNS ──────────────────────────────────────────────────────
+CONFIG_MDNS_MAX_SERVICES=5
+
+# ─── MQTT ──────────────────────────────────────────────────────
+CONFIG_MQTT_PROTOCOL_311=y
+CONFIG_MQTT_TRANSPORT_TCP=y
+
+# ─── FreeRTOS ──────────────────────────────────────────────────
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+# ─── Flash ─────────────────────────────────────────────────────
+# El modelo RandomForest (~750 KB) requiere partición de app grande.
+# Particiones custom con 3.5 MB para factory (partitions.csv)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"

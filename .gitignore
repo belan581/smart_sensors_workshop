@@ -1,0 +1,42 @@
+# .gitignore para el proyecto de taller
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Variables de entorno (nunca commitear)
+.env
+backend/.env
+
+# Base de datos
+backend/data/*.db
+
+# Modelos entrenados (grandes, se generan localmente)
+backend/models/*.pkl
+ml/outputs/*.pkl
+ml/outputs/*.txt
+
+# Dataset original de Kaggle (no redistribuir)
+ml/data/raw/
+ml/data/processed/
+
+# Build ESP-IDF
+firmware/build/
+firmware/managed_components/
+firmware/.vscode/
+tinyml/build/
+tynml/managed_components/
+
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.venv/
+facilitador/

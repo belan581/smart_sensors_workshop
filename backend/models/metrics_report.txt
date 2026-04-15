@@ -1,0 +1,45 @@
+============================================================
+  REPORTE COMPARATIVO DE MODELOS
+  Smart Sensors Workshop - Clasificador de Movimiento
+============================================================
+
+── RandomForestClassifier ──────────────────────────────
+  CV Accuracy    : 0.9754 ± 0.0238
+  Test Accuracy  : 0.9722
+  Tiempo entren. : 0.12 s
+
+  Clasificación por clase:
+              precision    recall  f1-score   support
+
+    drinking       1.00      0.96      0.98        24
+     driving       0.92      1.00      0.96        24
+    throwing       1.00      0.96      0.98        24
+
+    accuracy                           0.97        72
+   macro avg       0.97      0.97      0.97        72
+weighted avg       0.97      0.97      0.97        72
+
+
+── MLPClassifier ───────────────────────────────────────
+  CV Accuracy    : 0.8211 ± 0.0406
+  Test Accuracy  : 0.8750
+  Tiempo entren. : 0.04 s
+  Épocas         : 20
+
+  Clasificación por clase:
+              precision    recall  f1-score   support
+
+    drinking       0.79      0.92      0.85        24
+     driving       0.95      0.79      0.86        24
+    throwing       0.92      0.92      0.92        24
+
+    accuracy                           0.88        72
+   macro avg       0.88      0.88      0.88        72
+weighted avg       0.88      0.88      0.88        72
+
+
+── Recomendación para el taller ────────────────────────
+  RECOMENDADO: RandomForestClassifier
+  Razón: Rendimiento comparable, más interpretable,
+         no requiere normalización, más fácil de explicar.
+============================================================

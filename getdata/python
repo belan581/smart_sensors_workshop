@@ -1,0 +1,2 @@
+ERROR: pyserial no está instalado.
+  Instálalo con:  pip install pyserial
